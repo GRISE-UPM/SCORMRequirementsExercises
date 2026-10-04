@@ -62,7 +62,7 @@ Internal light. **
 3.1.2. When an internal button is pressed, the elevator will move to the corresponding floor. 
 
     </text>
-    <Global> Este ejercicio es un ejemplo </Global>
+    <Global>This exercise is an example</Global>
     <defect type="Completeness" weight="1" comment="There may be other purposes besides the ones enumerated.">It is valid for all purposes: Design, system testing, and project management.</defect>
     <defect type="Understability" weight="1" comment="The product family has not been defined. The product family may have characteristics that influence the requirements of the FAMILY model.">The FAMILY model is the simplest and cheapest elevator in the product family. </defect>
     <defect type="Understability" weight="1" comment="The concept of “small family house” has not been defined. The context in which the software is going to operate is key for proper requirements understanding.">This elevator is designed for small family houses (hence the model’s name), which are the most typical family houses in the US.</defect>

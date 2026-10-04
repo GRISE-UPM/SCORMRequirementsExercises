@@ -1,67 +1,67 @@
-<Ejercicios>
-	<ejercicio id="[RF 43]">
-		<titulo>Notifications are added to a notification interface, which contains information about:</titulo>
-		<tipoejercicio>0</tipoejercicio>
-		<tipo>1</tipo>
-		<subrequisitos>
-			<subrequisito>
-				<titulo>The reason of the notification</titulo>
-				<tipo>0</tipo>
-			</subrequisito>
-			<subrequisito>
-				<titulo>The kind of the notification</titulo>
-				<tipo>0</tipo>
-			</subrequisito>
-			<subrequisito>
-				<titulo>The type of the notification</titulo>
-				<tipo>0</tipo>
-			</subrequisito>
-			<subrequisito>
-				<titulo>The date/time of the notification</titulo>
-				<tipo>2</tipo>
-			</subrequisito>
-		</subrequisitos>
-	</ejercicio>
-	<ejercicio id="[RF 44]">
-		<titulo>When the user is able 'take' a notification (locked for others)</titulo>
-		<tipoejercicio>0</tipoejercicio>
-		<tipo>3</tipo>
-		<subrequisitos>
-			<subrequisito>
-				<titulo>do the action and mark the notification as 'finished'.</titulo>
-				<tipo>1</tipo>
-			</subrequisito>
-			<subrequisito>
-				<titulo>If the action is finished, the user name is stored in the notification.</titulo>
-				<tipo>2</tipo>
-			</subrequisito>
-		</subrequisitos>
-	</ejercicio>
-	<ejercicio id="[FR 12]">
-		<titulo>Loan of bibliographical resources</titulo>
-		<tipoejercicio>0</tipoejercicio>
-		<tipo>1</tipo>
-		<subrequisitos>
-			<subrequisito>
-				<titulo>The loan period shall be:</titulo>
-				<tipo>0</tipo>
-			</subrequisito>
-			<subrequisito>
-				<titulo>&gt; 7 days for students and administrative and support staff.</titulo>
-				<tipo>2</tipo>
-			</subrequisito>
-			<subrequisito>
-				<titulo>&gt; 15 days for faculty.</titulo>
-				<tipo>2</tipo>
-			</subrequisito>
-			<subrequisito>
-				<titulo>If the loan period expires on a non-working day, the loan shall BE due on the next working day.</titulo>
-				<tipo>2</tipo>
-			</subrequisito>
-			<subrequisito>
-				<titulo>Suspended users shall not be able to borrow books.</titulo>
-				<tipo>3</tipo>
-			</subrequisito>
-		</subrequisitos>
-	</ejercicio>
-</Ejercicios>
+<exercises>
+	<exercise id="[RF 43]">
+		<title>Notifications are added to a notification interface, which contains information about:</title>
+		<exerciseType>0</exerciseType>
+		<type>1</type>
+		<subrequirements>
+			<subrequirement>
+				<title>The reason of the notification</title>
+				<type>0</type>
+			</subrequirement>
+			<subrequirement>
+				<title>The kind of the notification</title>
+				<type>0</type>
+			</subrequirement>
+			<subrequirement>
+				<title>The type of the notification</title>
+				<type>0</type>
+			</subrequirement>
+			<subrequirement>
+				<title>The date/time of the notification</title>
+				<type>2</type>
+			</subrequirement>
+		</subrequirements>
+	</exercise>
+	<exercise id="[RF 44]">
+		<title>When the user is able 'take' a notification (locked for others)</title>
+		<exerciseType>0</exerciseType>
+		<type>3</type>
+		<subrequirements>
+			<subrequirement>
+				<title>do the action and mark the notification as 'finished'.</title>
+				<type>1</type>
+			</subrequirement>
+			<subrequirement>
+				<title>If the action is finished, the user name is stored in the notification.</title>
+				<type>2</type>
+			</subrequirement>
+		</subrequirements>
+	</exercise>
+	<exercise id="[FR 12]">
+		<title>Loan of bibliographical resources</title>
+		<exerciseType>0</exerciseType>
+		<type>1</type>
+		<subrequirements>
+			<subrequirement>
+				<title>The loan period shall be:</title>
+				<type>0</type>
+			</subrequirement>
+			<subrequirement>
+				<title>&gt; 7 days for students and administrative and support staff.</title>
+				<type>2</type>
+			</subrequirement>
+			<subrequirement>
+				<title>&gt; 15 days for faculty.</title>
+				<type>2</type>
+			</subrequirement>
+			<subrequirement>
+				<title>If the loan period expires on a non-working day, the loan shall BE due on the next working day.</title>
+				<type>2</type>
+			</subrequirement>
+			<subrequirement>
+				<title>Suspended users shall not be able to borrow books.</title>
+				<type>3</type>
+			</subrequirement>
+		</subrequirements>
+	</exercise>
+</exercises>
