@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <title>Software Requirements Specification: ACME elevator FAMILY model</title>
+    <text>
+# 1. Introduction
+
+## 1.1 Purpose
+
+This SRS describes the detailed requirements for the FAMILY model of the ACME elevator.This document has been submitted to Configuration Control and assigned a 1.0 Version number. <defect type="Completeness" weight="1" comment="There may be other purposes besides the ones enumerated.">It is valid for all purposes: Design, system testing, and project management.</defect>
+
+## 1.2 Scope
+
+<defect type="Understability" weight="1" comment="The product family has not been defined. The product family may have characteristics that influence the requirements of the FAMILY model.">The FAMILY model is the simplest and cheapest elevator in the product family.</defect> <defect type="Understability" weight="1" comment="The concept of “small family house” has not been defined. The context in which the software is going to operate is key for proper requirements understanding.">This elevator is designed for small family houses (hence the model’s name), which are the most typical family houses in the US.</defect> The target customer is a grown-up or handicapped person who cannot use the stairs and needs help to get to the rooms on the upper floor. <defect type="Completeness" weight="1" comment="Which regulations apply?">This elevator complies with all applicable safety regulations</defect> and is equipped with doors, an internal light, an alarm, and an emergency phone system. The alarm and the emergency phone system are independent devices; they have particular hardware and software, and therefore they are out of the scope of the current system.
+
+## 1.3 Product overview
+
+### 1.3.1 Product perspective
+
+the FAMILY model is a regular elevator composed of:
+
+<defect type="Understability" weight="1" comment=" The concept of “regular people” has not been defined. It is unlikely that it influences the software requirements, because it is just a matter of physical space, but it is preferable to double check.">Cabin with enough space for 4 regular people</defect> or a wheelchair.
+
+<defect type="Consistency" weight="1" comment="The buttons have not been enumerated previously in Section 1.2. The product overview is not required to describe the elevator’s components (Section 1.3.1 has this responsibility), but if it does, it shall be consistent.">Internal (within-cabin) control panel. It contains floor buttons, an alarm, and an emergency phone.  External (wall) control panel. There are panels on the bottom and top floors. They contain call buttons.</defect>
+
+<defect type="Consistency" weight="1" comment="As specified in Section 1.2, the internal light is an independent device, and is out of the scope for the SRS. Therefore, there is no reason to include it in the product perspective.">Internal light.</defect>
+
+### 1.3.2 Product functions
+
+<defect type="Consistency" weight="1" comment="There are two requirements, but this sentence suggest there is just one.">The only function the user can perform is to move the elevator</defect> to the <defect type="Ambiguity" weight="1" comment="What does “designated floor” really mean? ">designated floor.</defect>
+
+### 1.3.3 User characteristics
+
+<defect type="Completeness" weight="1" comment="These conventions have not been defined.">FAMILY models must follow the same conventions as regular elevators to ease safety operation</defect>. In particular, <defect type="Ambiguity" weight="1" comment="Which buttons: internal, external or both?">buttons should be lit when pressed,</defect> and doors closed during operation.
+
+## 1.5 SRS overview
+
+The following mandatory sections are not present in this SRS:
+
+- 1.3.4 Limitations
+- 1.4 Definitions
+- 2\. References
+- 3.2 Performance requirements
+- 3.3 Usability requirements
+- 3.4 Interface requirements
+- 3.5 Logical database requirements
+- 3.6 Design constraints
+- 3.7 Software system attributes
+- 3.8 Supporting information
+- 4\. Verification
+- 5.1 Assumptions and dependencies
+- 5.2 Acronyms and abbreviations
+- 5.3 Apportioning of requirements
+
+# 3. Requirements
+
+## 3.1 Functions
+
+<defect type="Organization" weight="1" comment="The requirement has not been annotated by priority/stability/version.">3.1.1. When an external call button is pressed, the elevator will move to the floor where the button was pressed.</defect>
+
+<defect type="Organization" weight="1" comment=" The requirement has not been annotated by priority/stability/version.">3.1.2. When an internal button is pressed, the elevator will move</defect> to the <defect type="Ambiguity" weight="1" comment="What does “corresponding floor” really mean?">corresponding floor.</defect>
+    </text>
+    <Global>This exercise is an example</Global>
+</document>
