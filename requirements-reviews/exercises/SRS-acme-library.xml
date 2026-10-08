@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <title>SRS: ACME Municipal Library Information System</title>
+    <instructions></instructions>
+    <text>
+# 1 Introduction
+
+## 1.1 Purpose
+
+This SRS specifies the requirements for developing the ACME Municipal Library Information System (ACMELIS). It is intended for the ACME software engineers who will design and implement ACMELIS, and for <defect type="Necessary" weight="1" comment="This SRS is written for the development of ACMELIS, and the Scope states that ACMELIS does not handle the acquisition and withdrawal of books. The team in charge of those tasks is not an audience of this SRS, so their participation is not necessary.">the team that will develop the acquisition and withdrawal module</defect>.
+
+## 1.2 Scope
+
+ACMELIS is a web-based information system for municipal library members (any resident of the municipality) and library staff. ACMELIS will handle book reservations, loans, and returns; related user notifications; and the suspension of users who return books late. ACMELIS will not handle the entry, modification, and deletion of library users and books, nor their acquisition and withdrawal. ACMELIS will not support physical operations, such as delivering books to users.
+
+## 1.3 Product Overview
+
+### 1.3.1 Product perspective
+
+The system has the following interfaces.
+
+- SMTP software, see [REF-01].
+- <defect type="Complete" weight="1" comment="The acronym SMS is used, but it is not defined in Section 5.2, so its meaning is not available to the reader.">SMS</defect> sending service, see [REF-02].
+- Letter printing service, see [REF-03].
+
+### 1.3.3 User characteristics
+
+Users include municipal library members of any age, education level, and computer familiarity, as well as library staff. Many users do not have an e-mail address, and others, such as elderly people, prefer to receive letters, so notification types (e-mail, SMS, or letter) differ among users.
+
+### 1.3.4 Limitations
+
+<defect type="Correct" weight="1" comment="Section 1.3.3 states that many users, such as elderly people, do not use e-mail and prefer letters, so they may not know how to use a web interface. Providing only a web interface for all operations does not respect the needs of these users.">ACMELIS provides a web interface only for all operations: Reservation, loan, return, and cancellation of suspensions.</defect> 
+
+## 1.5 SRS Overview
+
+This SRS follows the outline of ISO/IEC/IEEE 29148:2018. The sections of the outline that do not appear have been omitted for simplicity; notice that this reason is valid only in the framework of this academic course. Requirements are identified as FUN(xx) for functional, PER(xx) for performance, and QUA(xx) for quality requirements. Each requirement is a singular sentence that uses the verb "shall".
+
+# 2 References
+
+[REF-01] RFC 5321, Simple Mail Transfer Protocol, IETF, 2008.
+[REF-02] ACME Municipality SMS Gateway Interface Guide, version 1.0, ACME Municipality IT Services, 2024.
+[REF-03] ACME Municipality Letter Printing Service Interface Guide, version 1.0, ACME Municipality Mail Service, 2024.
+
+# 3 Specific requirements
+
+## 3.1 Functions
+
+FUN(01) The system shall allow a user to reserve a book, whether or not the book is on loan.
+FUN(02) <defect type="Conforming" weight="1" comment="Section 1.5 states that every requirement uses the verb “shall”. This requirement uses “should”, which expresses a recommendation instead of a binding obligation.">The system should allow a user to consult their reservations.</defect>
+FUN(03) <defect type="Singular" weight="1" comment="The sentence joins two separate behaviors: cancelling and extending a reservation. Each should be a separate requirement.">The system shall allow a user to cancel or extend a reservation.</defect>
+FUN(04) The system shall allow each user to choose the notification type (e-mail, SMS, or letter).
+FUN(05) <defect type="Unambiguous" weight="1" comment="“before” does not define how many days before the due date the notification is sent, so each designer and tester can interpret it differently.">The system shall notify the user with the oldest reservation, before the loan due date, using the chosen notification type.</defect>
+FUN(06) <defect type="Necessary" weight="1" comment="The Scope states that ACMELIS does not handle the acquisition of books. Requesting the purchase of a book is an acquisition task, so it is not needed by the specified system.">The system shall allow library staff to request the purchase of a book that has more than 5 reservations per week during four consecutive weeks.</defect>
+FUN(07) The system shall allow the librarian to register a loan requested by a user at the library.
+FUN(08) The system shall set the loan period to 21 days for every user.
+FUN(09) <defect type="Correct" weight="1" comment="Library staff should be able to use the system. maybe they cannot get loans, but they should be able to access other features.">The system shall not allow a suspended user to use the system.</defect>
+FUN(10) <defect type="Complete" weight="1" comment="The requirement cites [REF-04], but Section 2 has no entry with that identifier. The content of the notice cannot be known without the missing reference.">The system shall send the overdue notices to the user, with the notification type chosen, using the template defined in [REF-04].</defect>
+FUN(11) <defect type="Appropriate" weight="1" comment="The requirement prescribes the web server and the database product. These are design decisions for which no need is stated, and they constrain the developers unnecessarily.">The system shall run on an Apache Tomcat 9 web server with a PostgreSQL 14 database.</defect>
+
+## 3.2 Performance requirements
+
+PER(01) The system shall serve 20 simultaneous users with a response time of less than 10 seconds.
+
+## 3.7 Software system attributes
+
+QUA(01) <defect type="Verifiable" weight="1" comment="“Resist brute-force attacks” does not state how many attempts or what attack rate must be withstood, so there is no objective criterion to decide by testing whether the requirement is met.">The authentication mechanism shall resist brute-force attacks.</defect>
+QUA(02) <defect type="Feasible" weight="1" comment="Reception depends on the mobile operator and on the phone of the user (switched off, out of coverage), which the system does not control, so it can only guarantee that the message is sent.">The system shall guarantee that every SMS notification is received by the user.</defect>
+
+# 5 Appendixes
+
+## 5.1 Assumptions and dependencies
+
+The IT department of the ACME Municipality is responsible for the initial data load. <defect type="Correct" weight="1" comment="The Scope states that ACMELIS handles the loan and return of books, so loans are part of the system and not an external dependency. Listing the loan module as a dependency is incorrect.">ACMELIS depends on the library's loan module, which the ACME Municipality supplies.</defect>
+
+## 5.2 Acronyms and abbreviations
+
+**SMTP:** Simple Mail Transfer Protocol. 
+**SRS:** Software Requirements Specification.
+    </text>
+</document>

@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <contents>
     <document>
-        <file>ERS-elevator.xml</file>
-        <title>Software Requirements Specification: ACME elevator FAMILY model</title>
+        <file>SRS-elevator.xml</file>
+        <title>SRS: ACME elevator FAMILY model</title>
     </document>
     <document>
         <file>ERS-microwave.xml</file>
         <title>Software Requirements Specification: ACME microwave oven ABC model</title>
+    </document>
+    <document>
+        <file>SRS-acme-library.xml</file>
+        <title>ACME Municipal Library Information System</title>
     </document>
 </contents>
